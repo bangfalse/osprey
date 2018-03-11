@@ -8,6 +8,7 @@
       <section class="container">
           <section class="content">
               <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
+              {{ if .Params.description }}<h3 class="sub-title">{{ .Params.description }}</h3>{{ end }}
 
               <div class="sub-header">
                   {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read

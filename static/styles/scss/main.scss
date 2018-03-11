@@ -118,6 +118,11 @@ h1, h2, h3 {
   }
 }
 
+h3.sub-title {
+  margin-top: initial;
+  letter-spacing: 1px;
+}
+
 .posts-list {
   margin: 0 0 $vertical-rhythm;
 }
