@@ -3,8 +3,8 @@ $('#form-contact').addEventListener('submit', function(e) {
 
   // Store form field values
   var name = $("input[name=name]").value;
-  var email = $("input[name=email").value;
-  var subject = $("input[name=_subject").value;
+  var email = $("input[name=email]").value;
+  var subject = $("input[name=_subject]").value;
   var message = $("textarea[name=message]").value;
 
   // AJAX request
@@ -18,7 +18,7 @@ $('#form-contact').addEventListener('submit', function(e) {
   }
 
   // Send to Formspree
-  request.open('POST', 'https://formspree.io/{{ .Site.Params.email }}', true);
+  request.open('POST', this.action, true);
   request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
   // Call function when the state changes
   request.onreadystatechange = function() {

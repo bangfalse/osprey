@@ -2,9 +2,7 @@
 {{ if .IsHome }}
   <script src="/scripts/{{ if .Site.Params.cacheBustJS }}{{ index .Site.Data.cachedAssets "index.js" }}{{ else }}index.min.js{{ end }}" type="text/javascript"></script>
   {{ if .Site.Params.ajaxFormspree }}
-    <script>
-      {{ partial "scripts/contact.min.js" . | safeJS }}
-    </script>
+    <script src="/scripts/{{ if .Site.Params.cacheBustJS }}{{ index .Site.Data.cachedAssets "contact.js" }}{{ else }}contact.min.js{{ end }}" type="text/javascript"></script>
   {{ end }}
 {{ else }}
   <script src="/scripts/{{ if .Site.Params.cacheBustJS }}{{ index .Site.Data.cachedAssets "main.js" }}{{ else }}main.min.js{{ end }}" type="text/javascript"></script>
