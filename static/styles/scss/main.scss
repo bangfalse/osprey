@@ -270,6 +270,27 @@ h3.sub-title {
   h2 {
     color: #FFF;
   }
+  .content > div {
+    text-align: center;
+    color: $smoke;
+    p {
+      color: $smoke;
+      margin: 0 auto;
+      margin-bottom: 0.5rem;
+      max-width: 90%;
+    }
+    a {
+      text-shadow: initial;
+    }
+    ul, ol {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    ul li {
+      color: $smoke;
+      text-align: left;
+    }
+  }
   h3 {
     font-family: $font-body;
   }
