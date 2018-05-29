@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Bitter|Muli&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro|Bitter|Muli:400,600&subset=latin-ext");
 @import "flexboxgrid";
 @import "colors";
 @import "typography";
@@ -27,6 +27,20 @@
     div.logo, div.nav-toggle {
       max-width: 50% !important;
     }
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .container {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .container, .container * {
+    visibility: visible;
   }
 }
 
@@ -173,7 +187,7 @@ h3.sub-title {
     0.15em 0.075em #fff,
     -0.15em 0.075em #fff;
     background-image: linear-gradient($accent,$accent);
-    background-size: 1px 2px;
+    background-size: 2px 2px;
     background-repeat: repeat-x;
     background-position: 0 95%;
     text-decoration: none;
