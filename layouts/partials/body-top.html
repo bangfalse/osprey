@@ -11,11 +11,13 @@
       <div class="row middle-xs center-xs">
         <div class="col-xs-12"><img src="{{ .Site.Params.logoBig | relURL }}" alt="{{ .Site.Title }}"></div>
       </div>
+      {{ if not .Site.Params.hideTagline }}
       <div class="row middle-xs center-xs">
         <div class="col-xs-12">
           <h1>{{ .Site.Params.tagline }}<span class="cursor">|</span></h1>
         </div>
       </div>
+      {{ end }}
     </div>
   </header>
 {{ end }}

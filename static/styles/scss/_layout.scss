@@ -26,11 +26,18 @@ body {
 }
 
 header {
-  height: 100vh;
+  height: calc(100vh - 4rem);
   background-color: $white;
+  background-image: url("/bg.png");
 
   div { z-index: 101; }
-  img { max-height: $vertical-rhythm * 6; }
+  img {
+    @media only screen and(max-height: $vertical-rhythm * 14) {
+      max-height: calc(100vh - 4rem);
+    }
+    max-height: $vertical-rhythm * 14;
+    height: 100%;
+  }
   h1 { font-family: $font-body; }
   .cursor { animation: 1s blink step-end infinite; }
 }
