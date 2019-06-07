@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  {{ partial "header.html" . }}
+  {{ partial "head.html" . }}
   <body>
     {{ partial "body-top" . }}
     <main>
 
       <section class="blog" id="blog">
-          <div class="container">
-              <div class="row center-xs">
-                  <div class="col-xs-12"><h1>{{ humanize .Type }}</h1></div>
-              </div>
-              <div class="row">
-                  <div class="col-xs-12 posts-list">
-                      {{ range .Data.Pages }}
-                          <article>
-                              <h2><a href="{{ .Permalink | relURL }}">{{ .Title }}</a></h2>
-                              <div class=sub-header>
-                              {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ .ReadingTime }} minute read
-                              </div>
-                          </article>
-                      {{ end }}
-                  </div>
-              </div>
+        <div class="container">
+          <div class="row center-xs">
+            <div class="col-xs-12"><h1>{{ humanize .Type }}</h1></div>
           </div>
+          <div class="row">
+            <div class="col-xs-12 posts-list">
+              {{ range .Data.Pages }}
+                <article>
+                  <h2><a href="{{ .Permalink | relURL }}">{{ .Title }}</a></h2>
+                  <div class=sub-header>
+                    {{ .Date.Format (.Site.Params.dateform | default "January 2, 2006") }} · {{ i18n "minuteRead" .ReadingTime }}
+                  </div>
+                </article>
+              {{ end }}
+            </div>
+          </div>
+        </div>
       </section>
 
     </main>
